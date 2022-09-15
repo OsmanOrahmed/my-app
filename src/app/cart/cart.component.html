@@ -1,0 +1,43 @@
+<h1>Cart Page</h1>
+
+<label>Name:</label>
+<input type="text"[(ngModel)]="name">
+<br>
+
+<label>Price:</label>
+<input class="Form-control" type="number" [(ngModel)]="price">
+<br>
+
+<label>Quantity:</label>
+<input class="Form control" type="number" [(ngModel)]="quantity">
+<br>
+
+<button class="btn btn-primary" (click)="add()">Add to Cart</button>
+<button class="btn btn-danger" (click)="deleteAll()">Empty Cart</button>
+<br>
+<br><br><br>
+
+<button (click)="priceLowtoHigh()" >Price Low to High</button>
+<button (click)="priceHightoLow()" >Price High to Low</button>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price {{totalAmount}}</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i=index">
+            <td>{{ product.name}}</td>
+            <td 
+              [ngStyle]="{ 'color': product.price>10000 ? 'red' : 'green'}"
+              [ngClass]="{'bred': product.price>10000, 'bgreen':product.price<10000}"
+              >{{ product.price | price}}</td>
+            <td>{{ product.quantity}}</td>
+            <td><button (click)="delete(i)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

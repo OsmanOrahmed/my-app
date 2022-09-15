@@ -1,0 +1,13 @@
+<h1> calculator </h1>
+
+<input class="form-control" type="number" [(ngModel)]="number1"><br>
+<br>
+<input class="form-control" type="number" [(ngModel)]="number2"><br>
+<br>
+<button class="btn btn-primary" (click)="sum()">Sum</button>
+<button  class="btn btn-primary" (click)="sub()">sub</button>
+<button class="btn btn-primary" (click)="mul()">Mul</button>
+<button class="btn btn-primary" (click)="div()">Div</button>
+<br>
+<h3>Result =  {{ result }}</h3>
+

@@ -1,0 +1,26 @@
+.parent {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.p1{
+    text-align: left;
+    padding-top: 20px;
+    height: 100vh;
+    overflow: auto;
+}
+.child1 {
+    height: 100%;
+    width: 20%;
+    color: white;
+    background-color:black;
+    text-align:center;
+}
+button{background-color: red;}
+.child2 {
+    overflow: auto;
+    height: 100%;
+    width: 80%;
+    background-color: grey;
+}
+ 

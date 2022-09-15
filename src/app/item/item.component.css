@@ -1,0 +1,8 @@
+.product{
+    width: 500px;
+    height: 600px;
+    border: 60px;
+    background-color: antiquewhite;
+    margin: 40px;
+    text-align: center;
+}

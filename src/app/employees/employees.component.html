@@ -1,0 +1,34 @@
+<h1 class="h1">Employees Registration Form</h1>
+<div class="container">
+<label><b>Name : </b></label>
+<input class="form-control" type="text" [(ngModel)]="name" placeholder="Enter Name">
+<label><b>Age :</b></label>
+<input class="form-control" type="number" [(ngModel)]="age">
+<label><b>Company :</b></label>
+<input class="form-control" type="text" [(ngModel)]="company" placeholder="Enter Company">
+<label><b>Package :</b></label>
+<input class="form-control" type="number" [(ngModel)]="package">
+<input type="checkbox">  <label><b> I Agree </b> </label><br>  
+<button class="btn btn-primary" (click)="submit()" >Register</button><br>
+<button (click)="packageLowtoHigh()" class="btn btn-dark">Package Low to high </button> <button (click)="packageHightoLow()" class="btn btn-dark">Package high to Low</button>
+</div>
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr>
+            <th><b>Name </b></th>
+            <th><b>Age</b></th>
+            <th><b>Company</b></th>
+            <th><b>Package</b></th>
+            <th><button (click)="deleteAll()" class="btn btn-danger" >Delete All</button></th>
+        </tr>
+    </thead>      
+    <tbody>
+        <tr *ngFor="let employee of employees; let i=index">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age | age}}</td>
+            <td>{{ employee.company }}</td>
+            <td>{{ employee.package | package }}</td>
+            <td><button (click)="delete(i)" class="btn btn-danger">Delete</button>
+        </tr>
+    </tbody>
+</table>

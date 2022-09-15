@@ -1,0 +1,12 @@
+<table class="table">
+    <thead>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of Accounts">
+            <td>{{ account.createdAt }}</td>
+            <td>{{ account.account_name}}</td>
+            <td>{{ account.available_balance}}</td>
+        </tr>
+    </tbody>
+</table>

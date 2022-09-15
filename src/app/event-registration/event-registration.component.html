@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Event-registration </h2>
+
+    <input class="form-control" type="text" [(ngModel)]="name">
+    <input required type="checkbox" > I Agree <br>
+    <button  class="btn btn-primary" (click)="register()">Register</button>
+    <button  class="btn btn-danger" (click)="delete()"> Delete </button>
+    <button class="btn btn-danger" (click)="deleteAll()"> Delete All </button>
+    <button class="btn btn-success" (click)="reverse()"> Reverse </button>
+    
+    
+
+    <br>
+
+    <ol>
+        <li *ngFor="let name of names; let i = index "> {{name}} 
+            <button class="btn btn-danger" (click)="deleteEach( i )">Delete</button>
+        </li>
+        
+    </ol>
+</div>
