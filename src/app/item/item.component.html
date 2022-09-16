@@ -6,6 +6,7 @@
     <p> Description :{{ item.description}}</p>
     <p> category: {{ item.category}}</p>
     <p><img src="{{item.image}}"[width]="120"[height]="130"></p>
+    <app-star [rating]="item.rating.rate"></app-star>
     <p>Rating :{{item.rating.rate}}</p>
     <p>Rating Counts{{item.rating.count}}</p>
     
